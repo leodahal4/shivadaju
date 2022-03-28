@@ -7,17 +7,10 @@
       <v-container>
         <v-row>
           <v-col cols="12">
-            <v-text-field
-              label="Email*"
-              required
-            />
+            <v-text-field label="Email*" required />
           </v-col>
           <v-col cols="12">
-            <v-text-field
-              label="Password*"
-              type="password"
-              required
-            />
+            <v-text-field label="Password*" type="password" required />
           </v-col>
         </v-row>
       </v-container>
@@ -25,18 +18,10 @@
     </v-card-text>
     <v-card-actions>
       <v-spacer />
-      <v-btn
-        color="blue darken-1"
-        text
-        @click="closeRegisterDialog()"
-      >
+      <v-btn color="blue darken-1" text @click="closeRegisterDialog()">
         Close
       </v-btn>
-      <v-btn
-        color="blue darken-1"
-        text
-        @click="closeRegisterDialog()"
-      >
+      <v-btn color="blue darken-1" text @click="closeRegisterDialog()">
         Submit
       </v-btn>
     </v-card-actions>
@@ -46,13 +31,11 @@
 <script>
 export default {
   methods: {
-    closeRegisterDialog () {
-      this.$emit('closeRegisterDialog')
-    }
-  }
-}
+    closeRegisterDialog() {
+      this.$emit("closeRegisterDialog");
+    },
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

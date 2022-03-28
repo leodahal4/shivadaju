@@ -27,11 +27,7 @@
           class="mr-5"
         >
           <template v-slot:placeholder>
-            <v-row
-              class="fill-height ma-0"
-              align="center"
-              justify="center"
-            >
+            <v-row class="fill-height ma-0" align="center" justify="center">
               <v-progress-circular
                 indeterminate
                 color="primary"
@@ -39,9 +35,7 @@
             </v-row>
           </template>
         </v-img>
-        <div :class="appBarContentColor">
-          Ecommerce
-        </div>
+        <div :class="appBarContentColor">Ecommerce</div>
       </v-btn>
       <v-btn
         text
@@ -59,18 +53,11 @@
           height="30"
           class="mr-5"
         />
-        <div
-          :class="appBarContentColor"
-        >
-          Ecommerce
-        </div>
+        <div :class="appBarContentColor">Ecommerce</div>
       </v-btn>
     </v-toolbar-title>
     <v-spacer />
-    <div
-      id="nav"
-      v-if="checkMobileDesktop"
-    >
+    <div id="nav" v-if="checkMobileDesktop">
       <v-btn
         text
         rounded
@@ -85,53 +72,29 @@
       </v-btn>
     </div>
     <v-spacer v-if="checkMobileDesktop" />
-    <div
-      class="hidden-xs-and-down mr-5"
-      v-if="checkMobileDesktop"
-    >
+    <div class="hidden-xs-and-down mr-5" v-if="checkMobileDesktop">
       <v-menu offset-y>
         <template v-slot:activator="{ attrs, on }">
-          <v-btn
-            text
-            rounded
-            v-bind="attrs"
-            v-on="on"
-          >
-            <v-icon>
-              mdi-account
-            </v-icon>
+          <v-btn text rounded v-bind="attrs" v-on="on">
+            <v-icon> mdi-account </v-icon>
             Account
           </v-btn>
         </template>
         <v-list>
-          <v-dialog
-            v-model="loginDialog"
-            persistent
-            max-width="400px"
-          >
+          <v-dialog v-model="loginDialog" persistent max-width="400px">
             <template v-slot:activator="{ on, attrs }">
               <v-list-item>
-                <v-list-item-title
-                  v-bind="attrs"
-                  v-on="on"
-                >
+                <v-list-item-title v-bind="attrs" v-on="on">
                   Login
                 </v-list-item-title>
               </v-list-item>
             </template>
             <LoginCard @closeLoginDialog="loginDialog = false" />
           </v-dialog>
-          <v-dialog
-            v-model="registerDialog"
-            persistent
-            max-width="600px"
-          >
+          <v-dialog v-model="registerDialog" persistent max-width="600px">
             <template v-slot:activator="{ on, attrs }">
               <v-list-item>
-                <v-list-item-title
-                  v-bind="attrs"
-                  v-on="on"
-                >
+                <v-list-item-title v-bind="attrs" v-on="on">
                   Register
                 </v-list-item-title>
               </v-list-item>
@@ -157,10 +120,7 @@
         />
       </template>
       <v-card>
-        <v-toolbar
-          dark
-          color="primary"
-        >
+        <v-toolbar dark color="primary">
           <v-toolbar-title>
             <v-btn
               text
@@ -176,28 +136,17 @@
                 width="70"
                 height="30"
               />
-              <div
-                class="white--text"
-              >
-                Ecommerce
-              </div>
+              <div class="white--text">Ecommerce</div>
             </v-btn>
           </v-toolbar-title>
           <v-spacer />
           <v-toolbar-items>
-            <v-btn
-              icon
-              dark
-              @click="appNavDialog = false"
-            >
+            <v-btn icon dark @click="appNavDialog = false">
               <v-icon>mdi-close</v-icon>
             </v-btn>
           </v-toolbar-items>
         </v-toolbar>
-        <v-list
-          two-line
-          dense
-        >
+        <v-list two-line dense>
           <v-list-item
             v-for="(links, index) in mobileRoutes"
             :key="index"
@@ -206,9 +155,7 @@
             dense
           >
             <v-list-item-content>
-              <v-list-item-title
-                v-text="links.name"
-              />
+              <v-list-item-title v-text="links.name" />
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -218,69 +165,68 @@
 </template>
 
 <script>
-import LoginCard from './LoginCard'
-import RegisterCard from './RegisterCard'
+import LoginCard from "./LoginCard";
+import RegisterCard from "./RegisterCard";
 
 export default {
-  name: 'AppBar',
+  name: "AppBar",
   components: {
     LoginCard,
-    RegisterCard
+    RegisterCard,
   },
-  data () {
+  data() {
     return {
       appNavDialog: false,
       routes: [
-        { name: 'Vision', link: '/vision' },
-        { name: 'How It Works', link: '/how-it-works' },
-        { name: 'About', link: '/about' },
-        { name: 'Categories', link: '/categories' },
-        { name: 'Custom', link: '/custom' }
+        { name: "Vision", link: "/vision" },
+        { name: "How It Works", link: "/how-it-works" },
+        { name: "About", link: "/about" },
+        { name: "Categories", link: "/categories" },
+        { name: "Custom", link: "/custom" },
       ],
       mobileRoutes: [
-        { name: "Vision", link: '/vision' },
-        { name: 'About', link: '/about' },
-        { name: 'Categories', link: '/categories' },
-        { name: 'Login', link: '/login' },
-        { name: 'Custom', link: '/custom' },
-        { name: 'Register', link: '/register' }
+        { name: "Vision", link: "/vision" },
+        { name: "About", link: "/about" },
+        { name: "Categories", link: "/categories" },
+        { name: "Login", link: "/login" },
+        { name: "Custom", link: "/custom" },
+        { name: "Register", link: "/register" },
       ],
-      appBarcolor: 'transparent',
+      appBarcolor: "transparent",
       dark: false,
-      appBarContentColor: 'blue--text',
+      appBarContentColor: "blue--text",
       loginDialog: false,
-      registerDialog: false
-    }
+      registerDialog: false,
+    };
   },
   methods: {
-    searchButton () {
-    },
-    changeColorOnScroll (e) {
-      if (typeof window === 'undefined') return
-      const top = window.pageYOffset || e.target.scrollTop || 0
+    searchButton() {},
+    changeColorOnScroll(e) {
+      if (typeof window === "undefined") return;
+      const top = window.pageYOffset || e.target.scrollTop || 0;
       if (top > 20) {
-        this.appBarcolor = 'primary'
-        this.appBarContentColor = 'white--text'
-        this.dark = true
+        this.appBarcolor = "primary";
+        this.appBarContentColor = "white--text";
+        this.dark = true;
       } else {
-        this.appBarcolor = 'transparent'
-        this.appBarContentColor = 'blue--text'
-        this.dark = false
+        this.appBarcolor = "transparent";
+        this.appBarContentColor = "blue--text";
+        this.dark = false;
       }
-    }
+    },
   },
   computed: {
-    checkMobileDesktop () {
+    checkMobileDesktop() {
       if (
-        this.$vuetify.breakpoint.name === 'xs' ||
-        this.$vuetify.breakpoint.name === 'sm'
+        this.$vuetify.breakpoint.name === "xs" ||
+        this.$vuetify.breakpoint.name === "sm"
       ) {
-        return false
+        return false;
       }
-      return true
-    }
-  }
-}
+      return true;
+    },
+  },
+};
 </script>
 
 <style scoped>

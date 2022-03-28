@@ -1,11 +1,6 @@
 <template>
-  <v-dialog
-    v-model="ok"
-    max-width="35%"
-  >
-    <v-card
-      opacity="10"
-    >
+  <v-dialog v-model="ok" max-width="35%">
+    <v-card opacity="10">
       <v-card-text>
         <v-container no-gutters>
           <v-row>
@@ -29,7 +24,7 @@
                 justify="center"
                 class="text-h6 font-weight-light"
               >
-              from a fair offer on your home
+                from a fair offer on your home
               </div>
               <v-text-field
                 label="Enter your street address"
@@ -42,11 +37,7 @@
               </v-btn>
             </v-col>
             <v-col cols="6">
-              <v-card
-                elevation="6"
-                height="100%"
-                width="100%"
-              >
+              <v-card elevation="6" height="100%" width="100%">
                 <v-img
                   src="../assets/offer.jpg"
                   lazy-src="../assets/offer.jpg"
@@ -90,12 +81,12 @@
 <script>
 export default {
   data: () => ({
-    ok: true
+    ok: true,
   }),
   methods: {
     closeOfferDialog() {
-      this.$emit("closeOfferDialog")
-    }
-  }
-}
+      this.$emit("closeOfferDialog");
+    },
+  },
+};
 </script>
