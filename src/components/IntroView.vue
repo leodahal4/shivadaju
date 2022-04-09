@@ -13,19 +13,7 @@
           </v-card-title>
           <hr class="style2" />
           <v-card-text class="font-weight-light text-h6 text-justify">
-            <div class="ml-10">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-              dolores eaque impedit neque earum veritatis autem ipsam, quisquam
-              excepturi voluptatibus, facere obcaecati quo? Perferendis hic, cum
-              voluptates quia nisi ullam?<br />
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-              dolores eaque impedit neque earum veritatis autem ipsam, quisquam
-              excepturi voluptatibus, facere obcaecati quo? Perferendis hic, cum
-              voluptates quia nisi ullam?<br />
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-              dolores eaque impedit neque earum veritatis autem ipsam, quisquam
-              excepturi voluptatibus, facere obcaecati quo? Perferendis hic, cum
-              voluptates quia nisi ullam?<br />
+            <div class="ml-10" v-html="introText">
             </div>
           </v-card-text>
         </v-card>
@@ -33,7 +21,10 @@
 
       <v-col cols="6" sm="12" md="12" xs="12" lg="6" xl="6">
         <v-card elevation="12">
-          <v-img lazy-src="../assets/into.jpg" src="../assets/into.jpg">
+          <v-img
+            :src="require('../assets/' + imageSrc)"
+            :lazy-src="require('../assets/' + imageLowerSrc)"
+          >
             <template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
                 <v-progress-circular
@@ -50,7 +41,14 @@
 </template>
 
 <script>
+import basicConfiguration from "../../basicConfiguration.json"
 export default {
+  data: () => ({
+    imageSrc: "",
+    imageLowerSrc: "",
+
+    introText: ""
+  }),
   created() {
     switch (this.$vuetify.breakpoint.name) {
       case "xs":
@@ -65,6 +63,11 @@ export default {
         console.log(800);
     }
   },
+  mounted() {
+    this.imageSrc = basicConfiguration.introPicture
+    this.imageLowerSrc = basicConfiguration.introLowerPicture
+    this.introText = basicConfiguration.introductionText
+  }
 };
 </script>
 

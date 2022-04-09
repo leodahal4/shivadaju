@@ -9,6 +9,7 @@
     "deploy": "node scripts/live-site-deploy.js"
   },
   "dependencies": {
+    "animate": "^1.0.0",
     "core-js": "^3.8.3",
     "epic-spinners": "^1.1.0",
     "register-service-worker": "^1.7.2",

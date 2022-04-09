@@ -107,7 +107,47 @@
 </template>
 
 <script>
-export default {};
+import basicConfiguration from "../../basicConfiguration.json"
+
+export default {
+  data: () => ({
+    point1Text: "",
+    point1description: "",
+    point1icon: "",
+
+    point2Text: "",
+    point2description: "",
+    point2icon: "",
+
+    point3Text: "",
+    point3description: "",
+    point3icon: "",
+
+    point4Text: "",
+    point4description: "",
+    point4icon: "",
+  }),
+  mounted() {
+    this.point1icon = basicConfiguration.point1icon
+    this.point1text = basicConfiguration.point1text
+    this.point1description = basicConfiguration.point1description
+
+    this.point2icon = basicConfiguration.point2icon
+    this.point2text = basicConfiguration.point2text
+    this.point2description = basicConfiguration.point2description
+
+    this.point3icon = basicConfiguration.point3icon
+    this.point3text = basicConfiguration.point3text
+    this.point3description = basicConfiguration.point3description
+
+    this.point4icon = basicConfiguration.point4icon
+    this.point4text = basicConfiguration.point4text
+    this.point4description = basicConfiguration.point4description
+
+    this.whatmakesusdifferentButtonText = basicConfiguration.whatmakesusdifferentButtonText
+
+  }
+};
 </script>
 
 <style scoped>

@@ -1,0 +1,36 @@
+{
+  "comment": "Images Section",
+  "breaker": "-----------------------------------------------",
+
+  "homePicture": "home.jpg",
+  "homeLowerPicture": "homeLower.jpg",
+  "introPicture": "into.jpg",
+  "introLowerPicture": "intoLower.jpg",
+
+  "comment": "Basic Settings",
+  "breaker": "-----------------------------------------------",
+
+  "applicationName": "Demo Ecommerce",
+  "introductionText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur dolores eaque impedit neque earum veritatis autem ipsam, quisquam excepturi voluptatibus, facere obcaecati quo? Perferendis hic, cum voluptates quia nisi ullam?<br/> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur dolores eaque impedit neque earum veritatis autem ipsam, quisquam excepturi voluptatibus, facere obcaecati quo? Perferendis hic, cum voluptates quia nisi ullam?<br/> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur dolores eaque impedit neque earum veritatis autem ipsam, quisquam excepturi voluptatibus, facere obcaecati quo? Perferendis hic, cum voluptates quia nisi ullam?",
+  "comment": "You can enter <br/> as many times you want on above key i.e introductionText ---------------",
+  
+  "comment": "What Makes Us different?",
+
+  "point1text": "Stress-Free Sale",
+  "point1description": "When you work with us, you will be selling without the hassle of expensive repairs, paying commissions, waiting to find a qualified buyer, cleaning out the house or long drawn-out negotiations. It couldn't be easier!",
+  "point1icon": "mdi-hand-heart-outline",
+
+  "point2Text": "We Close On Your Time Frame",
+  "point2description": " We purchase your house for cash! You get your money quickly with a fast settlement or simply put your home under contract and schedule a settlement down the road, at your convenience. ",
+  "point2icon": "mdi-cash-multiple",
+
+  "point3Text": " We Offer Transparent Pricing ",
+  "point3description": " We help you understand how our offer differs from what you would receive if you sold your house with a traditional real estate agent. You’ll get a fair cash offer for your house as-is. ",
+  "point3icon": "mdi-timelapse",
+
+  "point4Text": "We Help You Move",
+  "point4description": " Our priority is to make the selling process as smooth as possible for you. We offer white glove service, with full clean out service, along with packing and moving assistance. ",
+  "point4icon": "mdi-home-switch",
+
+  "whatmakesusdifferentButtonText": "get my cash offer today"
+}

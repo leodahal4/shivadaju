@@ -131,6 +131,7 @@
 export default {
   data: () => ({
     items: ["Google", "Refer", "Direct Mail", "Social Media", "Other"],
+    checkbox: true,
   }),
 };
 </script>

@@ -1,8 +1,8 @@
 <template>
   <v-card elevation="10" class="mt-10">
     <v-img
-      src="../assets/home4.jpg"
-      lazy-src="../assets/home4.jpg"
+      :src="require('../assets/' + imageSrc)"
+      :lazy-src="require('../assets/' + imageSrc)"
       class="mt-16 fullscreenImage"
       height="850"
     >
@@ -36,7 +36,7 @@
                 rounded
               >
                 <template v-slot:append>
-                  <v-btn color="primary" @click="show" rounded class="mb-4">
+                  <v-btn color="primary" @click="streetAddress" rounded class="mb-4">
                     Claim Fair Offer
                   </v-btn>
                 </template>
@@ -60,12 +60,23 @@
 </template>
 
 <script>
+import basicConfiguration from "../../basicConfiguration.json"
+
 export default {
+  data: () => ({
+    imageSrc: "",
+    imageLowerSrc: "",
+    streetAddressValue: "",
+  }),
   methods: {
-    show() {
-      console.log("Here it is.");
-    },
+    streetAddress() {
+      console.log("ok")
+    }
   },
+  mounted() {
+    this.imageSrc = basicConfiguration.homePicture
+    this.imageLowerSrc = basicConfiguration.homeLowerPicture
+  }
 };
 </script>
 
